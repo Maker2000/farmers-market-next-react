@@ -1,0 +1,11 @@
+.navItem{
+    transition: background 150ms;
+
+}
+.navItem:hover, .active{
+    background-color: var(--button-primary-border-hover-color);
+    color: white;
+}
+.mobileIcon:hover, .activeMobileIcon{
+    color: var(--button-primary-border-hover-color);
+}

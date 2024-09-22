@@ -1,0 +1,6 @@
+.bgImage{
+    background-color: var(--background);
+}
+.userChip{
+    background-color: var(--button-primary-border-hover-color-faded);
+}

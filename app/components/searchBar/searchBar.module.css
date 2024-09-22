@@ -1,0 +1,7 @@
+.searchInput{
+    background: var(--bar-background);
+    border-radius: 0.5rem;
+    width: 20vw;
+    height: 2rem;
+    outline: none;
+}

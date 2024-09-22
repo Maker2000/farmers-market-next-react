@@ -3,14 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F1F4F8;
+  --foreground: #000F;
+  --panel-background: #ffffff;
+  --separator-color:#efefef6a;
+  --primary-color: #1b853d;
+  --primary-color-hover: #2aa651;
+  --accent-color: #DA7674;
+  --panel-background-faded: color-mix(in srgb, var(--panel-background), #0000 90%);
+  --primary-color-faded: color-mix(in srgb, var(--primary-color), #0000 40%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #121214;
+    --foreground: #ffff;
+    --panel-background: #000;
+    --separator-color: #6e6e6e6a;
   }
 }
 
@@ -25,3 +34,58 @@ body {
     text-wrap: balance;
   }
 }
+.btn{
+  padding: 0.5rem;
+  border-radius: 0.6rem;
+  border: 1px solid ;
+}
+.btn-primary{
+  transition: background 160ms ease-in-out;
+  color: white;
+  background: var(--primary-color);
+  border-radius: 0.6rem;
+  border: none;
+}
+.btn-primary:hover{
+  background: var(--primary-color-hover);
+}
+.panel{
+  background: var(--panel-background);
+}
+.input{
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  padding:0.6rem;
+  outline: none;
+  font-size: medium;
+}
+.input:focus{
+  outline: var(--primary-color-faded) solid 2px;
+}
+.input:disabled{
+  background-color: color-mix(in srgb, var(--foreground), var(--background) 85%);
+}
+.label{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-grow: 1;
+  font-size: small; 
+  font-weight: bold;
+}
+
+.ag-header-cell-label {
+  @apply  font-bold bg-fixed
+}
+.pac-container, .pac-item, .pac-matched, .pac-item-query{
+  background-color: var(--background);
+  color: var(--foreground);
+}
+.pac-item{
+  padding: 1rem;
+}
+.pac-item:hover{
+background-color: var(--separator-color);
+}
+
